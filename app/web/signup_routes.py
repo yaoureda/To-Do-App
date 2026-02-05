@@ -1,4 +1,4 @@
-from .config import web_bp, BASE_URL
+from .config import web_bp
 import requests
 from flask import render_template, request, redirect, url_for, flash
 
@@ -12,7 +12,9 @@ def signup_post():
     username = request.form.get('username')
     password = request.form.get('password')
 
-    response = requests.post(f"{BASE_URL}/api/users", json={"username": username, "password": password})
+    base_url = request.url_root
+
+    response = requests.post(f"{base_url}/api/users", json={"username": username, "password": password})
 
     if response.status_code == 409:
         flash('Username already exists')

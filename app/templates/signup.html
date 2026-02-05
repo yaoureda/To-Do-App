@@ -6,7 +6,7 @@
 {% block body %}
 <div class="align-items-center py-4 bg-body-tertiary form-container">
     <main class="form-signin w-100 m-auto">
-        <form method="POST" action="{{ url_for('web.signup_post') }}">
+        <form id="signup-form">
             <h1 class="h3 mb-3 fw-normal text-center">Sign up</h1>
             <div class="form-floating">
                 <input id="floatingInput" class="form-control" type="username" name="username" required>
@@ -21,4 +21,29 @@
         </form>
     </main>
 </div>
+<script>
+document.getElementById("signup-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("floatingInput").value;
+    const password = document.getElementById("floatingPassword").value;
+
+    const response = await fetch("/api/users", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+    });
+
+    if (response.status === 201) {
+        window.location.href = "/login";
+    } else if (response.status === 409) {
+        alert("Username already exists");
+    } else {
+        alert("Signup failed");
+    }
+});
+</script>
+
 {% endblock %}

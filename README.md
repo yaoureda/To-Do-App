@@ -62,6 +62,19 @@ python run.py
 
 ---
 
+## 🌐 Démo en ligne
+
+Le site est disponible ici : [To-Do-App](https://to-do-app-y7i6.onrender.com)
+
+Vous pouvez naviguer entre les pages :
+- Tasks (incluant un timer et les tâches à faire)
+- Habits Tracker
+- Dashbord (des minutes travaillées durant les 7 derniers jours)
+
+⚠️ Le site est hébergé sur Render (free tier) : il peut mettre jusqu’à 1 minute à démarrer après une période d’inactivité.
+
+---
+
 ## 🧾 Améliorations possibles
 
 - Garder l'historique des tâches complétées.

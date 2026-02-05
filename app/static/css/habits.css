@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    color: green;
+    font-size: bold;
+    margin: 10px;
+}
+
+#inc {
+    background-color: greenyellow;
+}
+
+#reset {
+    background-color: lightblue;
+}

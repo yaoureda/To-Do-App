@@ -1,0 +1,23 @@
+# Variables d'environnement
+.env
+
+# Bytecode python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Fichiers de bases de données
+*.db
+
+# Flask
+instance/
+
+# Environnement virtuel
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/

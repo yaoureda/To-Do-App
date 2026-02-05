@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tasks.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1 id="welcome">Welcome {{ user.username }} !</h1>
+<div id="container">
+    <div id="display">
+        00:25:00
+    </div>
+    <div id="controls">
+        <button id="startBtn" onclick="start()">Start</button>
+        <button id="stopBtn" onclick="stop()">Stop</button>
+        <button id="resetBtn" onclick="reset()">Reset</button>
+        <button id="setBtn" onclick="set()">Set timer</button>
+    </div>
+</div>
+<h1>My tasks</h1>
+<div class="big-div"></div>
+<div class="addBtn-div">
+    <button class="add" onclick="addTask()">Add a Task</button>
+</div>
+<script src="{{ url_for('static', filename='js/dashbord.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/tasks.js') }}" defer></script>
+{% endblock %}

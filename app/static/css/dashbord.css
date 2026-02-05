@@ -1,0 +1,21 @@
+.chart-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+#workChart {
+    max-width: 700px;   /* max width of chart */
+    width: 90%;         /* fill 90% of parent container */
+    height: 300px;      /* fixed height, can adjust */
+    margin: 20px auto;  /* center it */
+    display: block;     /* necessary for centering */
+}
+
+.container {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    margin: 20px
+}

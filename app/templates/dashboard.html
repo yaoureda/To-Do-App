@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashbord.css') }}">
+{% endblock %}
+
+{% block body %}
+<h4>📊 Work Dashboard (minutes per day for last 7 days)</h4>
+<div class="container">
+    <button type="button" class="btn btn-warning" onclick="clearAllStats()">Clear working history</button>
+</div>
+<div class="chart-container">
+    <canvas id="workChart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+<script src="{{ url_for('static', filename='js/dashbord.js') }}" defer></script>
+{% endblock %}
